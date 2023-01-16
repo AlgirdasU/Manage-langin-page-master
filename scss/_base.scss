@@ -1,0 +1,58 @@
+:root {
+  // PRIMARY COLORS
+  --bright-red: hsl(12, 88%, 59%);
+  --dark-blue: hsl(228, 39%, 23%);
+
+  // NEAUTRAL COLORS
+  --dark-grayish-blue: hsl(227, 12%, 61%);
+  --very-dark-blue: hsl(233, 12%, 13%);
+  --very-pale-red: hsl(13, 100%, 96%);
+  --vary-light-gray: hsl(0, 0%, 98%);
+
+  // WIDTHS
+  --mobile-width: 37.5rem;
+  --desktop-width: 144rem;
+
+  // TYPOGRAPHY
+  --body-font-size: 1.6rem;
+
+  --major-font: "Be Vetnam Pro", sans-serif;
+  --font-w-regular: 400;
+  --font-w-medium: 500;
+  --font-w-bold: 700;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+span,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--major-font);
+  font-size: var(--body-font-size);
+  // TEST
+  text-rendering: optimizeSpeed;
+  // background-color: rgb(212, 192, 166);
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+// TEST
+html:focus-within {
+  scroll-behavior: smooth;
+}
