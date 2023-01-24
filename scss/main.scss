@@ -1,6 +1,7 @@
-@import 'base';
-@import 'navigation';
-@import 'hero';
-@import 'about';
-@import 'testimonials';
-@import 'footer';
+@import "base";
+@import "header";
+@import "about";
+@import "testimonials";
+@import "footer";
+
+@import "_mixinExtend";

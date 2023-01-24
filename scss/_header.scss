@@ -1,0 +1,157 @@
+@use "mixinExtend" as *;
+
+.container {
+  max-width: var(--desktop-width);
+  margin: 0 auto;
+  padding: 0 1.5rem 0;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.mobile-shadow {
+  background-color: rgba(0, 0, 0, 0.5);
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.5) 0%,
+    rgba(0, 0, 0, 0) 92%
+  );
+  height: 100vh;
+  max-width: 100vw;
+  width: 100%;
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  transition: all 300ms ease;
+}
+
+// ---NAVIGATION---
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 2rem;
+  max-width: var(--inner-width);
+  // height: 16rem;
+  margin: 0 auto;
+  padding: 5rem 0 9rem;
+  position: relative;
+  z-index: 150;
+
+  &__list {
+    display: flex;
+    column-gap: 3rem;
+  }
+
+  &__link {
+    list-style: none;
+    font-weight: var(--font-w-medium);
+    transition: all 150ms ease;
+    font-size: 1.4rem;
+    color: var(--very-dark-blue);
+    white-space: nowrap;
+    cursor: pointer;
+
+    &:hover {
+      color: var(--dark-grayish-blue);
+    }
+  }
+}
+
+.header-pattern {
+  position: absolute;
+  right: -16rem;
+  top: -29rem;
+
+  &__img {
+  
+    max-width: 80rem;
+    width: 100%;
+    height: auto;
+    margin-left: 9rem;
+  }
+}
+.header-pattern-sm {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+
+  &__img {
+    width: 30rem;
+  }
+}
+
+// ---BUTTONS---
+.btn-cta {
+  @include btn-cta-format;
+
+  &:hover {
+    background-color: var(--light-red);
+  }
+
+  &:active {
+    box-shadow: 0 0.5rem 0.9rem 0rem rgba(242, 95, 58, 0.3);
+  }
+}
+
+.btn-menu {
+  background: none;
+  border: none;
+  display: none;
+  cursor: pointer;
+  position: relative;
+  z-index: 1000;
+
+  &__icon {
+    width: 2.6rem;
+    height: 2.6rem;
+
+    &--close {
+      display: none;
+    }
+  }
+}
+
+// ---HERO---
+.hero {
+  max-width: var(--inner-width);
+  margin: 0 auto;
+  display: grid;
+  column-gap: 3rem;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  padding-bottom: 10rem;
+
+  &__text-box {
+    max-width: 44rem;
+    z-index: 20;
+  }
+
+  &__heading-primary {
+    font-size: clamp(3.5rem, 3vw + 1rem, 5rem);
+    line-height: 1.2;
+    margin-bottom: 2.8rem;
+  }
+
+  &__description {
+    margin-bottom: 3.5rem;
+    max-width: 34rem;
+  }
+
+  &__image-box {
+    margin-right: -4%;
+    position: relative;
+  }
+
+  &__image {
+    max-width: 56rem;
+    width: 100%;
+    height: auto;
+    position: relative;
+    z-index: 10;
+  }
+}
+
+.btn-hero {
+  display: inline-block;
+}
