@@ -27,9 +27,9 @@ Users should be able to:
 
 ### Screenshot
 ![](images/desktop.jpg)
-![](images/mobile.jpg
+![](images/mobile.jpg)
 ![](images/lighthousemob.jpg)
-![](images/lighthousedesktop.jpg
+![](images/lighthousedesktop.jpg)
  
 ### Links
 
